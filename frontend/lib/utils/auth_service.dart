@@ -1,14 +1,15 @@
 import 'dart:convert';
+import 'package:garage_app/private.dart';
 import 'package:http/http.dart' as http;
 import 'package:shared_preferences/shared_preferences.dart';
 
 class AuthService {
-  final String baseUrl = 'http://10.0.2.2:3000/api/auth';
+  final String baseUrl = 'http://$ip:3000/api/auth';
 
   Future<String> registerUser(String username, String email, String password, String role) async {
     try {
       final response = await http.post(
-        Uri.parse('http://10.0.2.2:3000/api/auth/register'),
+        Uri.parse('http://$ip/api/auth/register'),
         headers: {'Content-Type': 'application/json'},
         body: jsonEncode({
           'name': username,

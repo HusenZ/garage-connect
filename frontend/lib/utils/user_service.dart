@@ -1,4 +1,5 @@
 import 'dart:convert';
+import 'package:garage_app/private.dart';
 import 'package:http/http.dart' as http;
 import 'package:shared_preferences/shared_preferences.dart';
 
@@ -10,7 +11,7 @@ class UserService {
     if (token == null) return null;
 
     final response = await http.get(
-      Uri.parse('http://localhost:3000/api/profile'), 
+      Uri.parse('http://$ip:3000/api/profile'), 
       headers: {
         'Content-Type': 'application/json',
         'Authorization': 'Bearer $token',

@@ -1,3 +1,4 @@
+import 'package:garage_app/private.dart';
 import 'package:shared_preferences/shared_preferences.dart';
 import 'package:socket_io_client/socket_io_client.dart' as IO;
 
@@ -5,7 +6,7 @@ class SocketService {
   late IO.Socket socket;
 
   void initSocket(String userId) {
-    socket = IO.io('http://localhost:3000', <String, dynamic>{
+    socket = IO.io('http://$ip:3000', <String, dynamic>{
       'transports': ['websocket'],
       'autoConnect': false,
     });
