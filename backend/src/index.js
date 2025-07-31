@@ -38,10 +38,19 @@ app.use(passport.initialize());
 app.set('io', io);
 
 // Routes
+console.log('Registering auth routes...');
 app.use('/api/auth', authRoutes);
+
+console.log('Registering garage routes...');
 app.use('/api/garages', garageRoutes);
+
+console.log('Registering booking routes...');
 app.use('/api/bookings', bookingRoutes);
+
+console.log('Registering user routes...');
 app.use('/api', userRoutes);
+
+console.log('All routes registered successfully!');
 
 // Socket.IO for real-time updates
 io.on('connection', (socket) => {
@@ -63,10 +72,6 @@ app.use((err, req, res, next) => {
   res.status(500).json({ error: 'Something went wrong!' });
 });
 
-// 404 handler
-app.use('*', (req, res) => {
-  res.status(404).json({ error: 'Route not found' });
-});
 
 const PORT = process.env.PORT || 3000;
 server.listen(PORT, () => {
