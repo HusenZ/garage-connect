@@ -11,7 +11,7 @@ class UserService {
     if (token == null) return null;
 
     final response = await http.get(
-      Uri.parse('http://$ip:3000/api/profile'), 
+      Uri.parse('http://10.0.2.2:3000/api/profile'), 
       headers: {
         'Content-Type': 'application/json',
         'Authorization': 'Bearer $token',

@@ -24,7 +24,7 @@ class BookingService {
         'garageId': garageId,
         'service': service,
         'bookingDate': bookingDate.toIso8601String(),
-        'notes': notes,
+        'notes': notes ?? "note",
       }),
     );
 
