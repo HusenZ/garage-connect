@@ -34,3 +34,10 @@ Garage Connect is a full-stack application built using **Flutter (frontend)** an
 | Auth       | JWT + Google OAuth (Passport.js)|
 | Real-time  | Socket.IO                       |
 | Dev Tools  | Postman, VS Code, GitHub        |
+
+![Garage App Preview](https://github.com/HusenZ/garage-connect/blob/main/frontend/assets/home_screen.png)
+### auth screens
+![Auth Screens Preview](https://github.com/HusenZ/garage-connect/blob/main/frontend/assets/login_screen.png)(https://github.com/HusenZ/garage-connect/blob/main/frontend/assets/register_screen.png)
+![service Screen Preview](https://github.com/HusenZ/garage-connect/blob/main/frontend/assets/service_screen.png)
+
+
